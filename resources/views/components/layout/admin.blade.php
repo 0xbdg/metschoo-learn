@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ $title ?? "App" }}</title>
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-gray-100 min-h-screen flex overflow-x-hidden">
@@ -13,9 +15,9 @@
   <aside id="sidebar" class="sidebar fixed inset-y-0 left-0 z-30 w-64 bg-indigo-700 text-white transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out overflow-y-auto">
     <div class="p-6 font-bold text-2xl border-b border-indigo-600">Metschoo Learn</div>
     <nav class="mt-6 flex flex-col space-y-2 px-4">
-     <a href="#" class="block px-3 py-2 rounded hover:bg-indigo-600 transition">Dashboard</a>
-     <a href="#" class="block px-3 py-2 rounded hover:bg-indigo-600 transition">Siswa</a>
-     <a href="#" class="block px-3 py-2 rounded hover:bg-indigo-600 transition">Guru</a>
+     <a href="{{ route('dashboard') }}" class="block px-3 py-2 rounded hover:bg-indigo-600 transition">Dashboard</a>
+     <a href="{{ route('student_management') }}" class="block px-3 py-2 rounded hover:bg-indigo-600 transition">Siswa</a>
+     <a href="{{ route('teacher_management') }}" class="block px-3 py-2 rounded hover:bg-indigo-600 transition">Guru</a>
      <a href="#" class="block px-3 py-2 rounded hover:bg-indigo-600 transition">Absensi</a>
      <a href="#" class="block px-3 py-2 rounded hover:bg-indigo-600 transition">Materi</a>
     </nav>
