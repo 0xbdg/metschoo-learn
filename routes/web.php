@@ -29,3 +29,7 @@ Route::get('admin/student_management', function(){
 Route::get('admin/teacher_management', function(){
     return view("admin.teacher_management");
 })->name("teacher_management");
+
+Route::get('admin/superuser_management', function(){
+    return view("admin.superuser_management");
+})->name("superuser_management");
